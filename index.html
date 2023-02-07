@@ -1,6 +1,7 @@
 <!doctype HTML>
 <html>
-
+<script src="https://makerspace-giessen.de/objects/aframe-v1.0.4.min.js"></script>
+<script src="https://makerspace-giessen.de/objects/aframe-ar.min.js"></script>
   <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded arjs="trackingMethod: best; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; maxDetectionRate: 10; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;">
          
@@ -15,7 +16,7 @@
       <a-marker type="barcode" value="0">
         <a-entity
         position="0 0 0"
-        scale="0.05 0.05 0.05"
+        scale="1 1 1"
         material='color: red' 
         geometry='primitive: box'
       ></a-entity>

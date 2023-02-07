@@ -1,15 +1,27 @@
-<!DOCTYPE html>
+<!doctype HTML>
 <html>
-<head>
-<title>AR.js A-Frame Location-based</title>
-<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
-<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
-</head>
-<body>
-<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
-    <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
-    <a-entity material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: 7.169799974743122; longitude: 51.60818811377064" scale="10 10 10"></a-entity>
-</a-scene>
-</body>
+<script src="https://makerspace-giessen.de/objects/aframe-v1.0.4.min.js"></script>
+<script src="https://makerspace-giessen.de/objects/aframe-ar.min.js"></script>
+  <body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs="trackingMethod: best; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; maxDetectionRate: 10; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;">
+         
+   
+      <a-entity light="type: ambient; color: #fff; intensity: 0.8"></a-entity> 
+      <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-1 1 1"></a-entity>
+      <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="1 1 1"></a-entity>  
+      <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="1 -1 1"></a-entity> 
+      <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-1 -1 1"></a-entity>    
+             
+               
+      <a-marker type="barcode" value="0">
+        <a-entity
+        position="0 0 0"
+        scale="0.05 0.05 0.05"
+        material='color: red' 
+        geometry='primitive: box'
+      ></a-entity>
+      </a-marker>  
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
 </html>

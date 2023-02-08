@@ -1,28 +1,14 @@
 <!doctype HTML>
 <html>
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  <!-- we import arjs version without NFT but with marker + location based support -->
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs="trackingMethod: best; debugUIEnabled: false; sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; maxDetectionRate: 10; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;">
-         
-   
-      <a-entity light="type: ambient; color: #fff; intensity: 0.8"></a-entity> 
-      <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-1 1 1"></a-entity>
-      <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="1 1 1"></a-entity>  
-      <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="1 -1 1"></a-entity> 
-      <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-1 -1 1"></a-entity>    
-             
-      <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>        
-      <a-marker type='pattern' preset="custom" url="marker.patt">
-        <a-entity
-        position="0 0 0"
-        scale="1 1 1"
-        material='color: red' 
-        geometry='primitive: box'
-      ></a-entity>
-      </a-marker>  
-      <a-entity camera></a-entity>
+  <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+  <script src="https://google-ar.github.io/three.ar.js/dist/three.ar.js"></script>
+  <script src="https://rawgit.com/chenzlabs/aframe-ar/827e9db/dist/aframe-ar.min.js"></script>
+  <body>
+    <a-scene ar>
+      <a-box width="0.25" height="0.25" depth="0.25" position="-0.25 0.125 -0.75" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere position="0 0.3125 -1.25" radius="0.3125" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="0.25 0.1875 -0.75" radius="0.125" height="0.375" color="#FFC65D"></a-cylinder>
+      <a-plane position="0 0 -1" rotation="-90 0 0" width="1" height="1" color="#7BC8A4" shadow></a-plane>
     </a-scene>
   </body>
 </html>

@@ -4,7 +4,7 @@
   <!-- we import arjs version without NFT but with marker + location based support -->
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs="trackingMethod: best; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; maxDetectionRate: 10; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;">
+    <a-scene embedded arjs="trackingMethod: best; debugUIEnabled: false; sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; maxDetectionRate: 10; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;">
          
    
       <a-entity light="type: ambient; color: #fff; intensity: 0.8"></a-entity> 
@@ -13,14 +13,14 @@
       <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="1 -1 1"></a-entity> 
       <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-1 -1 1"></a-entity>    
              
-               
+      <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>        
       <a-marker type='pattern' preset="custom" url="pattern-qrcode.patt">
-        <a-entity
+        <!-- <a-entity
         position="0 0 0"
         scale="1 1 1"
         material='color: red' 
         geometry='primitive: box'
-      ></a-entity>
+      ></a-entity> -->
       </a-marker>  
       <a-entity camera></a-entity>
     </a-scene>

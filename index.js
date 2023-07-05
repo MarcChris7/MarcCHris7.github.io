@@ -21,6 +21,9 @@ function initWebXR() {
                 xrButton.textContent = "Enter AR";
                 xrButton.addEventListener("click", onButtonClicked);
             }
+            else{
+                xrButton.textContent = "Hat nicht geklappt";
+            }
         });
     }
 }

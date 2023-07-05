@@ -1,4 +1,5 @@
 import WebXRPolyfill from "https://cdn.jsdelivr.net/npm/webxr-polyfill@latest/build/webxr-polyfill.module.js";
+import * as THREE from 'three';
 const polyfill = new WebXRPolyfill();
 
 let canvas = null;

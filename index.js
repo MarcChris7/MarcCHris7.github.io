@@ -16,7 +16,7 @@ let xrRefSpace = null;
 function initWebXR() {
     if(navigator.xr){
         navigator.xr.isSessionSupported("immersive-ar").then((supported) =>{
-            if(supported){
+            if(!supported){
                 xrButton.disabled = false;
                 xrButton.textContent = "Enter AR";
                 xrButton.addEventListener("click", onButtonClicked);

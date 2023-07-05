@@ -1,6 +1,23 @@
 let canvas = null;
 let gl = null;
 
+//XR globals
+let xrButton = document.getElementById("xr-button");
+let xrSession = null;
+let xrRefSpace = null;
+
+function initWebXR() {
+    if(navigator.xr){
+        navigator.xr.isSessionSupported("immersive-vr").then((supported) =>{
+            if(supported){
+                xrButton.disabled = false;
+                xrButton.textContent = "Enter VR";
+                xrButton.addEventListener("click", onButtonClicked);
+            }
+        });
+    }
+}
+
 function onResize(){
     canvas.width = canvas.clientWidth * window.devicePixelRatio;
     canvas.height = canvas.clientHeight * window.devicePixelRatio;

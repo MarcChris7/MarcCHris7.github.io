@@ -12,10 +12,10 @@ let xrRefSpace = null;
 
 function initWebXR() {
     if(navigator.xr){
-        navigator.xr.isSessionSupported("immersive-vr").then((supported) =>{
+        navigator.xr.isSessionSupported("immersive-ar").then((supported) =>{
             if(supported){
                 xrButton.disabled = false;
-                xrButton.textContent = "Enter VR";
+                xrButton.textContent = "Enter AR";
                 xrButton.addEventListener("click", onButtonClicked);
             }
         });
@@ -24,7 +24,7 @@ function initWebXR() {
 
 function onButtonClicked(){
     if(!xrSession){
-        navigator.xr.requestSession("immersive-vr").then(onSessionStarted);
+        navigator.xr.requestSession("immersive-ar").then(onSessionStarted);
     }
     else{
         xrSession.end();

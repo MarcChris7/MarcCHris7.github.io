@@ -1,5 +1,6 @@
 import WebXRPolyfill from "https://cdn.jsdelivr.net/npm/webxr-polyfill@latest/build/webxr-polyfill.module.js";
 import * as THREE from 'three';
+import { ARButton } from 'three/addons/webxr/ARButton.js';
 const polyfill = new WebXRPolyfill();
 
 

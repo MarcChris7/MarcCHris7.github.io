@@ -84,5 +84,5 @@ const onXRFrame = (time, frame) => {
   }
   session.requestAnimationFrame(onXRFrame);
 
-
+  header.textContent  = "Hat echt nicht geklappt";
   }

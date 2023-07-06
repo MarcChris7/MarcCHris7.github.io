@@ -40,8 +40,8 @@ const renderer = new THREE.WebGLRenderer({
   // The API directly updates the camera matrices.
   // Disable matrix auto updates so three.js doesn't attempt
   // to handle the matrices independently.
-  const camera = new THREE.OrthographicCamera();
-  camera.matrixAutoUpdate = false;
+  const camera = new THREE.PerspectiveCamera();
+  camera.matrixAutoUpdate = true;
 
   header.textContent  = "3";
   // XR Session erstellen

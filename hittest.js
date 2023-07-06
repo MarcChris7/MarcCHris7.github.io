@@ -40,7 +40,7 @@ const renderer = new THREE.WebGLRenderer({
   // The API directly updates the camera matrices.
   // Disable matrix auto updates so three.js doesn't attempt
   // to handle the matrices independently.
-  const camera = new THREE.PerspectiveCamera();
+  const camera = new THREE.OrthographicCamera();
   camera.matrixAutoUpdate = false;
 
   header.textContent  = "3";

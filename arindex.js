@@ -18,6 +18,14 @@ function init() {
     container = document.createElement( 'div' );
     document.body.appendChild( container );
 
+    document.body.appendChild( ARButton.createButton( renderer ) );
+    renderer.xr.enabled = true;
+    renderer.setAnimationLoop( function () {
+
+        renderer.render( scene, camera );
+    
+    } );
+
     scene = new THREE.Scene();
 
     camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 20 );

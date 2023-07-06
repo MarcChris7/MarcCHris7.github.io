@@ -1,4 +1,4 @@
-var header = document.getElementById("Header");
+var header = document.getElementById("header");
 function activateXR() {
     
     //let xrButton = document.getElementById("Header");

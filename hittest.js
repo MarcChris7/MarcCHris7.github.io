@@ -1,4 +1,4 @@
-let xrButton = document.getElementById("xr-button");
+let xrButton = document.getElementById("Header");
 
 async function activateXR() {
     // Add a canvas element and initialize a WebGL context that is compatible with WebXR.

@@ -21,7 +21,7 @@ const materials = [
   new THREE.MeshBasicMaterial({color: 0x00ffff}),
   new THREE.MeshBasicMaterial({color: 0xffff00})
 ];
-
+header.textContent  = "1";
 // Create the cube and add it to the demo scene.
 const cube = new THREE.Mesh(new THREE.BoxBufferGeometry(0.2, 0.2, 0.2), materials);
 cube.position.set(1, 1, 1);
@@ -36,14 +36,14 @@ const renderer = new THREE.WebGLRenderer({
     context: gl
   });
   renderer.autoClear = false;
-  
+  header.textContent  = "2";
   // The API directly updates the camera matrices.
   // Disable matrix auto updates so three.js doesn't attempt
   // to handle the matrices independently.
   const camera = new THREE.PerspectiveCamera();
   camera.matrixAutoUpdate = false;
 
-
+  header.textContent  = "3";
   // XR Session erstellen
   // Initialize a WebXR session using "immersive-ar".
 const session = await navigator.xr.requestSession("immersive-ar");
